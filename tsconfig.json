@@ -1,0 +1,19 @@
+{
+
+  "compilerOptions": {
+    "strict": true,
+    "target": "es5",
+    "lib": ["es6", "dom", "es2015.reflect"],
+    "module": "commonjs",
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules/**"
+  ]
+}
