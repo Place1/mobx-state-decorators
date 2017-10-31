@@ -16,9 +16,13 @@ the project or messaging me!
 - `npm run lint`
 
 ## Example
+```
+npm install --save mobx-state-decorators
+```
+
 ```javascript
 import { observable } from 'mobx';
-import { queryParam } from '..';
+import { queryParam, persist } from 'mobx-state-decorators';
 
 export class Store {
 
