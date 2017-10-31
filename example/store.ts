@@ -1,5 +1,5 @@
 import { observable } from 'mobx';
-import { queryParam } from '..';
+import { queryParam } from '../src';
 
 export class Store {
   // @persist({ key: 'message '})
