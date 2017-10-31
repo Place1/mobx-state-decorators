@@ -6,6 +6,8 @@ with different parts of the browser such as a QueryParameter or in Local Storage
 This package is **Experimental** for now! Let me know if you like the idea by starring
 the project or messaging me!
 
+If you have ideas for other decorators like the ones i've created here, open an issue describing them! The existing decorators use `spy()` from mobx to intercept changes, so there's a lot of flexibility in what we can do with these decorators!
+
 ## System Requirements
 - NodeJS 8
 
