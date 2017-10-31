@@ -16,7 +16,7 @@ the project or messaging me!
 - `npm run lint`
 
 ## Example
-```
+```javascript
 import { observable } from 'mobx';
 import { queryParam } from '..';
 
