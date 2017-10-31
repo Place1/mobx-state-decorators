@@ -47,4 +47,4 @@ export class Store {
 
 ## Note
 This package requires `reflect-metadata` to be included!
-Make sure you have a `import 'reflect-metadata` somewhere in your application before you use this package!
+Make sure you have a `import 'reflect-metadata';` somewhere in your application before you use this package!
