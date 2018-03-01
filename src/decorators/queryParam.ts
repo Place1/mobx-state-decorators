@@ -13,7 +13,7 @@ export function queryParam(config: QueryParamConfig) {
     const query = queryString.parse(location.search);
     switch (mobxEvent.type) {
       case 'add':
-        mobxEvent.object[config.key] = serializer.fromJson(query[config.key]);
+        mobxEvent.object[mobxEvent.name] = serializer.fromJson(query[config.key]);
         break;
 
       case 'update':

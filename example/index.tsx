@@ -9,14 +9,25 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>{sharedStore.message || 'no message'}</h1>
+        <h1>Query Param Message = "{sharedStore.queryParamMessage}"</h1>
         <br />
         <input
           type="text"
-          value={sharedStore.message}
+          value={sharedStore.queryParamMessage}
           onChange={(event) => {
-            const { value } = event.currentTarget;
-            sharedStore.message = value;
+            sharedStore.queryParamMessage = event.currentTarget.value;
+          }}
+        />
+
+        <hr />
+
+        <h1>Local Storage Message = "{sharedStore.localStorageMessage}"</h1>
+        <br />
+        <input
+          type="text"
+          value={sharedStore.localStorageMessage}
+          onChange={(event) => {
+            sharedStore.localStorageMessage = event.currentTarget.value;
           }}
         />
       </div>

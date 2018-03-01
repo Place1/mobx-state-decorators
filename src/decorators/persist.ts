@@ -16,7 +16,7 @@ export function persist(config: PersistConfig) {
         break;
 
       case 'update':
-        const serialisedValue = serializer.toJson({ value: mobxEvent.object[mobxEvent.name] });
+        const serialisedValue = serializer.toJson({ value: mobxEvent.newValue });
         localStorage.setItem(config.key, serialisedValue);
         break;
     }
