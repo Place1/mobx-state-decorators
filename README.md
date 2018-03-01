@@ -9,7 +9,7 @@ the project or messaging me!
 If you have ideas for other decorators like the ones i've created here, open an issue describing them! The existing decorators use `spy()` from mobx to intercept changes, so there's a lot of flexibility in what we can do with these decorators!
 
 ## Demo
-[![demo](./demo.webm)](./demo.webm)
+[![demo](./demo.gif)](./demo.gif)
 
 ## System Requirements
 - NodeJS 8
