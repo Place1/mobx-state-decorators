@@ -1,6 +1,6 @@
 {
   "name": "mobx-state-decorators",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A utility library to make syncing mobx observables with other browser data sources easier, such as localstorage and the url bar!",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -43,7 +43,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "src/"
   ],
   "jest": {
     "moduleFileExtensions": [
