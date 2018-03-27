@@ -24,18 +24,18 @@ export function decoratorFactory(metadataKey: MetadataKey, changeHandler: Observ
 }
 
 spy((mobxEvent: MobxEvent) => {
-  const { object, name } = mobxEvent;
+  const { object, key } = mobxEvent;
   if (!object) {
     return;
   }
   const metadataKeys = Reflect.getMetadataKeys(object);
-  metadataKeys.forEach((key) => {
-    const metadata = Reflect.getMetadata(key, object) as Metadata | undefined;
+  metadataKeys.forEach((metadataKey) => {
+    const metadata = Reflect.getMetadata(metadataKey, object) as Metadata | undefined;
     if (!metadata) {
       return;
     }
     metadata
-      .filter((item) => item.property === name)
+      .filter((item) => item.property === key)
       .forEach((item) => item.changeHandler(mobxEvent));
   });
 });

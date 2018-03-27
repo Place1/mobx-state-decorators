@@ -12,7 +12,21 @@ export function persist(config: PersistConfig) {
       case 'add':
         const retrievedValue = localStorage.getItem(config.key) || '{}';
         const { value } = serializer.fromJson(retrievedValue);
-        mobxEvent.object[mobxEvent.name] = value;
+        // we do it in the next run of the event loop because the
+        // otherwise initial value for class properties will override
+        // the initial valaue we want.
+        // i.e.
+        // class MyStore {
+        //   @persist(...)
+        //   @observable
+        //   myProperty: string = '';
+        // }
+        // The initial/default value for myProperty is an empty string ''
+        // and this will be set on the observable after our spy pulls the
+        // localstorage value. So we want to make sure our local storage
+        // value happens after this.
+        // Yes it's a massive hack :()
+        setTimeout(() => mobxEvent.object[mobxEvent.key] = value, 0);
         break;
 
       case 'update':

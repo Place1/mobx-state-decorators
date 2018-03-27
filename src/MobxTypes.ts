@@ -7,7 +7,7 @@ export type MobxEventType = 'add' | 'reaction' | 'create' | 'update';
 
 export interface MobxEvent {
   type?: MobxEventType;
-  name: string;
+  key: string;
   object?: any;
   newValue?: any;
   spyReportStart?: boolean;

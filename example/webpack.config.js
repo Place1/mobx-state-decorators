@@ -18,7 +18,7 @@ module.exports = {
           "node_modules/",
         ],
         use: [
-          'awesome-typescript-loader',
+          'ts-loader',
         ],
       },
       {
