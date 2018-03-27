@@ -9,6 +9,11 @@ export class Store {
   @persist({ key: 'message ' })
   @observable
   localStorageMessage: string = '';
+
+  @persist({ key: 'another-message ' })
+  @observable
+  anotherLocalStorageMessage: string = '';
+
 }
 
 const sharedStore: Store = new Store();

@@ -30,6 +30,16 @@ class App extends React.Component {
             sharedStore.localStorageMessage = event.currentTarget.value;
           }}
         />
+
+        <h1>Another Local Storage Message = "{sharedStore.anotherLocalStorageMessage}"</h1>
+        <br />
+        <input
+          type="text"
+          value={sharedStore.anotherLocalStorageMessage}
+          onChange={(event) => {
+            sharedStore.anotherLocalStorageMessage = event.currentTarget.value;
+          }}
+        />
       </div>
     );
   }
